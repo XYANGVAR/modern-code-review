@@ -27,7 +27,8 @@ int main(){
 			else
 				cout << "Player 2: ";
 			cout << "Which cell to mark? i:[0..2], j:[0..2]: ";
-			cin >> i >> j;
+			while(cin >> i >> j)
+			{
 			if (turn == false)
 				game[i][j] = 'X';
 			else 
@@ -38,6 +39,7 @@ int main(){
 			} else if (n == 8){
                 cout << "Tie!" << endl;
                 break;
+			}
               }
               else{
                 printingResult(game);             
